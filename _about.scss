@@ -1,0 +1,39 @@
+.about {
+  text-align: center;
+  &::before {
+    content: "";
+    display: block;
+    height: 70px;
+    margin-top: -70px;
+  }
+  .heading {
+    @include headingH2;
+    padding-top: 60px;
+  }
+  .about-text {
+    padding-top: 40px;
+    p {
+      text-align: justify;
+      font-size: $pFontSizeXl;
+      letter-spacing: 0.5px;
+      line-height: 1.7;
+    }
+  }
+  .cta-contact {
+    padding-top: 20px;
+    display: flex;
+    justify-content: center;
+    .btn-contact {
+      text-transform: uppercase;
+      text-decoration: none;
+      letter-spacing: 0.5px;
+      padding: 10px 20px;
+      background-color: #101820ff;
+      color: $navLinksColor;
+      border-radius: 5px;
+      position: relative;
+      font-size: $landPageBtnFontSizeXl;
+      @include hoverBtn;
+    }
+  }
+}

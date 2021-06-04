@@ -1,0 +1,110 @@
+.navigation {
+  height: $navHeight;
+  background: $navBarColor;
+  padding: 0 100px;
+  position: fixed;
+  width: 100%;
+  z-index: 100;
+  .logo {
+    z-index: 150;
+    float: left;
+    height: $navHeight;
+    display: flex;
+    align-items: center;
+  }
+  .navi-links {
+    z-index: 50;
+    float: right;
+    height: $navHeight;
+    position: relative;
+    ul {
+      height: $navHeight;
+      display: flex;
+      align-items: center;
+      list-style: none;
+      li {
+        transition: all 0.3s ease;
+
+        .navi-link {
+          padding: 10px 20px;
+          text-decoration: none;
+          position: relative;
+          text-transform: uppercase;
+          color: $navLinksColor;
+          letter-spacing: 1.5px;
+          font-size: $navFontSizeXl;
+          transition: all 0.3s ease;
+          margin-right: 5px;
+          border-radius: 5px;
+          @include hoverBtn;
+        }
+        .translate-btn {
+          display: none;
+        }
+      }
+    }
+  }
+  .hamburger {
+    display: none;
+    position: fixed;
+    right: 100px;
+    top: 1%;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 2px solid $gold;
+    cursor: pointer;
+    z-index: 150;
+    .open {
+      content: "";
+      position: absolute;
+      width: 25px;
+      height: 2px;
+      top: 50%;
+      left: 22%;
+      background: $gold;
+      transition: all 0.5s ease;
+
+      &::before,
+      &::after {
+        content: "";
+        position: absolute;
+        width: 25px;
+        height: 2px;
+        transition: all 0.5s ease;
+      }
+      &::before {
+        top: -8px;
+        background: $gold;
+      }
+      &::after {
+        top: 8px;
+        background: $gold;
+      }
+    }
+    .close {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 22%;
+      transition: all 0.5s ease;
+      transform: rotate(405deg);
+      &::before,
+      &::after {
+        content: "";
+        position: absolute;
+        width: 25px;
+        height: 2px;
+        transition: all 0.5s ease;
+      }
+      &::before {
+        top: 0px;
+        transform: rotate(0deg);
+      }
+      &::after {
+        top: 0px;
+        transform: rotate(90deg);
+      }
+    }
+  }
+}

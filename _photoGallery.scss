@@ -1,0 +1,34 @@
+.gallery {
+  padding: 60px 0 60px 0;
+  text-align: center;
+  .heading {
+    @include headingH2;
+    padding-top: 60px;
+    padding-bottom: 40px;
+  }
+  .about-images {
+    p {
+      font-size: $pFontSizeXl;
+      text-align: justify;
+      letter-spacing: 0.5px;
+      line-height: 1.7;
+      padding-bottom: 60px;
+    }
+  }
+  .image-carousel {
+    .carousel {
+      .carousel-inner {
+        .carousel-item {
+          height: 810px;
+          img {
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+          }
+        }
+      }
+    }
+  }
+}

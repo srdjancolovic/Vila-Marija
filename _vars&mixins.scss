@@ -1,0 +1,68 @@
+//Colors
+$backgroundColor: #f1f4ffff;
+$navBarColor: #101820ff;
+$navLinksColor: #f1f4ffff;
+$buttonBackground: #101820ff;
+$gold: #f2aa4cff;
+
+$navHeight: 70px;
+$navFontSizeXl: 18px;
+$navFontSizeXl: 18px;
+
+//FOnts
+$h1FontSizeXl: 75px;
+$h1FontSizeMob: 45px;
+
+$h2FontSizeXl: 50px;
+$h2FontSizeLg: 45px;
+$h2FontSizeSm: 37px;
+$h2FontSizeMob: 30px;
+
+$pFontSizeXl: 19px;
+$pFontSizeLg: 18px;
+$pFontSizeSm: 17px;
+$pFontSizeMob: 17px;
+
+$landPageBtnFontSizeXl: 25px;
+$landPageBtnFontSizeLg: 22px;
+$landPageBtnFontSizeSm: 19px;
+$landPageBtnFontSizeMob: 18px;
+
+//MIXIN
+@mixin hoverBtn {
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    transition: transform 0.5s ease;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    border-style: solid;
+    border-color: #f2aa4cff;
+    border-radius: 5px;
+  }
+  &::before {
+    border-width: 2px 0 2px 0;
+    transform: scaleX(0);
+  }
+  &::after {
+    border-width: 0 2px 0 2px;
+    transform: scaleY(0);
+  }
+  &:hover::before,
+  &:hover::after {
+    transform: scale(1, 1);
+  }
+}
+
+//Heading h2
+@mixin headingH2 {
+  h2 {
+    text-transform: uppercase;
+    font-size: $h2FontSizeXl;
+    letter-spacing: 2px;
+    text-decoration: underline;
+  }
+}

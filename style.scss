@@ -1,0 +1,23 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  overflow-x: hidden;
+}
+body {
+  font-family: "Lato";
+  overflow-x: hidden;
+  background-color: #f1f4ffff;
+}
+
+@import "./vars&mixins";
+@import "./preloader";
+@import "./navbar";
+@import "./landingPage";
+@import "./about";
+@import "./photoGallery";
+@import "./contact";
+@import "./art";
+@import "./mediaQuery";

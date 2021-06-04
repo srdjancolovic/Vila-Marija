@@ -1,0 +1,64 @@
+.landing-page {
+  width: 100%;
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-image: url("img/bg1.JPG");
+  position: relative;
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+    height: 100vh;
+  }
+  .heading {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    h1 {
+      font-size: $h1FontSizeXl;
+      font-weight: 900;
+      color: white;
+      letter-spacing: 2px;
+      z-index: 50;
+      font-family: "Parisienne";
+    }
+    h2 {
+      font-size: $h2FontSizeXl;
+      font-weight: normal;
+      color: white;
+      z-index: 50;
+      font-family: "Parisienne";
+    }
+  }
+  .translate-btns {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    z-index: 50;
+    border: 1px solid $navLinksColor;
+
+    .btn {
+      font-size: $pFontSizeSm;
+      color: $navLinksColor;
+      border-radius: 0;
+
+      &:last-child {
+        border-top: 1px solid $navLinksColor;
+      }
+      &:hover {
+        color: $gold;
+        background-color: $buttonBackground;
+      }
+    }
+  }
+}
